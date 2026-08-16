@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Double Six Group</title>
+<meta name="description" content="Talk to Double Six Group about product, technology and brand for scaled growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+  .contact-form{border:1px solid var(--line-strong);border-radius:20px;background:var(--ink-2);padding:34px}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-dim);margin-bottom:9px}
+  .field input,.field textarea,.field select{width:100%;background:var(--ink);border:1px solid var(--line-strong);color:var(--ivory);border-radius:12px;padding:14px 16px;font-family:inherit;font-size:1rem;outline:none;transition:.2s}
+  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--brass)}
+  .field textarea{resize:vertical;min-height:120px}
+  .routes .route{border-top:1px solid var(--line);padding:26px 0}
+  .routes .route:first-child{border-top:none;padding-top:0}
+  .routes .route .k{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+  .routes .route h3{font-size:1.3rem;margin:10px 0 8px}
+  .routes .route p{color:var(--ivory-dim)}
+  .routes .route a{color:var(--brass)}
+  .form-note{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--ivory-faint);margin-top:8px}
+  @media(max-width:880px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="brand">
+    <span class="mini"><span class="die"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="die"><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+    Double Six Group
+  </a>
+  <button class="menu-btn" id="menuBtn">Menu</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="work.html">Work</a>
+    <a href="product-desk.html">The Desk</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html" class="nav-cta">Talk to us</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Let's talk about what's <em>really</em> driving your value.</h1>
+    <p>Whether you're backing a business, getting one ready to back, or building the product function that has to deliver the thesis — start the conversation.</p>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap contact-grid">
+
+    <div class="contact-form reveal">
+      <!-- REVIEW: this form posts to a mail service. Set the action to your Formspree
+           (or similar) endpoint, or replace with your preferred contact route.
+           Until then, the email + LinkedIn routes on the right work immediately. -->
+      <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="org">Company / fund</label>
+          <input id="org" name="organisation" type="text">
+        </div>
+        <div class="field">
+          <label for="topic">What's this about?</label>
+          <select id="topic" name="topic">
+            <option>A Scale-Readiness Audit</option>
+            <option>Fractional / interim product leadership</option>
+            <option>Advisory or diligence support</option>
+            <option>The Product Desk</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">In a line or two — what are you working through?</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send →</button>
+        <p class="form-note">We'll reply personally. No newsletters, no noise.</p>
+      </form>
+    </div>
+
+    <div class="routes reveal">
+      <div class="route">
+        <div class="k">Direct</div>
+        <h3>Email us</h3>
+        <p>The fastest way to reach a real operator. <br><a href="mailto:hello@doublesixgroup.com">hello@doublesixgroup.com</a></p>
+      </div>
+      <div class="route">
+        <div class="k">For investors</div>
+        <h3>Backing or buying a business?</h3>
+        <p>Ask us about the Scale-Readiness Audit — a fast, senior read of the product, technology, brand and cultural readiness behind the deal thesis.</p>
+      </div>
+      <div class="route">
+        <div class="k">For founders &amp; operators</div>
+        <h3>Building the growth engine?</h3>
+        <p>Fractional and interim product leadership, or a pressure-test of your proposition, roadmap or raise.</p>
+      </div>
+      <div class="route">
+        <div class="k">Try first</div>
+        <h3>Prefer to explore?</h3>
+        <p>Ask <a href="product-desk.html">the Product Desk</a> a real question and see how we think before you get in touch.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><span class="mini"><span class="die"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="die"><i></i><i></i><i></i><i></i><i></i><i></i></span></span>Double Six Group</a>
+        <p>Product, technology and brand for private equity and the businesses they back. We find, prove and unlock scaled product-market fit.</p>
+      </div>
+      <div class="foot-col"><h4>Explore</h4><a href="manifesto.html">Manifesto</a><a href="work.html">Work</a><a href="product-desk.html">The Product Desk</a><a href="contact.html">Contact</a></div>
+      <div class="foot-col"><h4>Get in touch</h4><a href="mailto:hello@doublesixgroup.com">hello@doublesixgroup.com</a><a href="contact.html">Start a conversation</a></div>
+    </div>
+    <div class="foot-base"><span>© 2026 Double Six Group</span><span>Product · Technology · Brand for scaled growth</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
